@@ -716,7 +716,10 @@ predictdate.innerText = formattedDate;
     homenav.style.backgroundColor ="lightblue";
     setTimeout(function(){
     homenav.style.backgroundColor ="transparent";
-    }, 1000)   
+    }, 1000)  
+    setTimeout(function (){
+            window.location.href ="https://bluepredict.vercel.app";
+}, 500) 
     })
     const predictionnav = document.getElementById("predictionnav");
     predictionnav.addEventListener("click", function(){
