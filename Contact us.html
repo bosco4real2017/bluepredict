@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact page</title>
+     <meta charset="UTF-8">
+        <meta name="viewport" content="width =device-width,initial-scale=1.0"></meta>
+        <style>
+        	body {
+    
+}
+#contactus{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-color:lightblue;
+}
+#whatsappcon{
+position:fixed;
+top:10%;
+left:2%;
+width:20%;
+height:10%;
+border-radius:50%;
+}
+#facebookcon{
+position:fixed;
+top:10%;
+left:28%;
+width:20%;
+height:10%;
+border-radius:50%;
+}
+#telegramcon{
+position:fixed;
+top:10%;
+left:53%;
+width:20%;
+height:10%;
+border-radius:50%;
+}
+#instagramcon{
+position:fixed;
+top:10%;
+left:78%;
+width:20%;
+height:10%;
+border-radius:50%;
+}
+#contactus h5{
+position:relative;
+top:27%;
+text-align:center;
+}
+#contactus h6{
+position:relative;
+top:28%;
+text-align:center;
+}
+#telegramjoin{
+position:fixed;
+top:70%;
+left:20%;
+width:60%;
+height:5%;
+background-color:blue;
+}
+#telegramjoin p{
+position:relative;
+top:-30%;
+text-align:center;
+}
+</style>
+    </head>
+    <body>
+    <div id="contactus">
+    <img id="whatsappcon" src ="https://i.pinimg.com/564x/84/80/62/848062eab246aa38a662d8a44afbcf36.jpg">
+    <img id="facebookcon" src ="https://freelogopng.com/images/all_img/1658030214facebook-logo-hd.png">
+    <img id="telegramcon" src ="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/640px-Telegram_logo.svg.png">
+    <img id="instagramcon" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png">
+    <h5>contact info:</h5>
+    <h6>bosco4real2017@gmail.com</h6>
+    <h6>+2349029261223</h6>
+    <h6>Apata, Ibadan, Oyo state</h6>
+    <h6>Nigeria</h6>
+    <h6>join our telegram channel</h6>
+    <div id="telegramjoin"><p>join</p></div>
+    </div>
+    <script>
+    const whatsappcon = document.getElementById("whatsappcon");
+    whatsappcon.addEventListener("click", function(){
+        whatsappcon.style.border ="3px solid orange"
+    setTimeout(function(){
+    whatsappcon.style.border ="none"
+    }, 1000)
+    setTimeout(function(){
+    window.location.href ="https://wa.me/+2347033308990";
+    }, 500)
+    })
+    const facebookcon = document.getElementById("facebookcon");
+    facebookcon.addEventListener("click", function(){
+        facebookcon.style.border ="3px solid orange"
+    setTimeout(function(){
+    facebookcon.style.border ="none"
+    }, 1000)
+    setTimeout(function(){
+    window.location.href ="https://www.facebook.com/peter.obikoya.5";
+    }, 500)
+    })
+    const telegramcon = document.getElementById("telegramcon");
+    telegramcon.addEventListener("click", function(){
+        telegramcon.style.border ="3px solid orange"
+    setTimeout(function(){
+    telegramcon.style.border ="none"
+    }, 1000)
+    setTimeout(function(){
+    window.location.href ="https://t.me/+2347033308990";
+    }, 500)
+    })
+    const instagramcon = document.getElementById("instagramcon");
+    instagramcon.addEventListener("click", function(){
+        instagramcon.style.border ="3px solid orange"
+    setTimeout(function(){
+    instagramcon.style.border ="none"
+    }, 1000)
+    setTimeout(function(){
+     window.location.href ="https://www.instagram.com/pesstar4real/";
+    }, 500)
+    })
+    const telegramjoin = document.getElementById("telegramjoin");
+    telegramjoin.addEventListener("click", function(){
+        telegramjoin.style.border ="3px solid orange"
+    setTimeout(function(){
+    telegramjoin.style.border ="none"
+    }, 1000)
+    })
+    </script>  
+    </body>
+</html>
