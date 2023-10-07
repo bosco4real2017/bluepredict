@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width =device-width,initial-scale=1.0"></meta>
+        <style>
+            #help{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-color:red;
+}
+#help h3{
+color:white;
+position:relative;
+text-align:center;
+}
+#help h5{
+position:relative;
+text-align:center;
+color:white;
+font-size:20px;
+:;}
+#help input{
+position:fixed;
+top:55%;
+left:10%;
+width:80%;
+background-color:lightblue;
+}
+#help textarea{
+position:fixed;
+top:65%;
+left:10%;
+width:80%;
+height:20%;
+background-color:lightblue;
+}
+#help button{
+position:fixed;
+top:90%;
+left:20%;
+width:60%;
+background-color:lightblue;
+}
+#helpbox{
+position:fixed;
+top:27%;
+width:100%;
+height:25%;
+background-color:purple;
+}
+#helpbox h5{
+position:relative;
+top:-10%;
+color:yellow;
+}
+#helpcancel{
+position:fixed;
+top:4%;
+left:4%;
+width:10%;
+height:5%;
+background-color:lightblue;
+}
+#helpcancel p{
+position:absolute;
+top:-250%;
+left:-10%;
+font-size:50px;
+}
+        </style>
+    </head>
+    <body>
+     <div id="help">
+     <div id="helpcancel"><p>&larr;</p></div>
+     <h3>Help and Support</h3>
+     <h5>If any help is needed message us at gmail:"bosco4real2017@gmail.com" or post help</h5>
+     <div id="helpbox"><h5>Your help text will be display here:<span id="post"></span><br/><span id="post2"></span></h5></div>
+    <input id="yourname" type="text" placeholder="Your name" required>
+    <textarea id="yourtext" placeholder="your help text..."></textarea>
+    <button id="posthelp">post help</button>
+     </div>
+     <script>
+    const yourname = document.getElementById("yourname");
+        const yourtext = document.getElementById("yourtext");
+        const post = document.getElementById("post");
+        const help = document.getElementById("help");
+        const posthelp = document.getElementById("posthelp");
+posthelp.addEventListener("click", function(){
+    posthelp.style.border ="3px solid orange";
+    setTimeout(function(){
+    posthelp.style.border ="none";
+    post.innerHTML = yourname.value;
+    post.style.display ="block";
+    yourname.value="";
+    post2.innerHTML = yourtext.value;
+    post2.style.display ="block";
+    yourtext.value="";
+    }, 1000)
+})
+   const helpcancel = document.getElementById("helpcancel");
+   helpcancel.addEventListener("click", function(){
+   helpcancel.style.border ="3px solid purple";
+    setTimeout(function(){
+    window. location. href ="http://localhost:2435/storage/emulated/0/Documents/football+predictions.html/my+project.html" ;
+    helpcancel.style.border ="none";
+    }, 1000)
+   })
+     </script>
+    </body>
+</html>
