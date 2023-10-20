@@ -494,6 +494,22 @@ position:relative;
 top:30%;
 text-align:center;
 }
+#adsblockerbox {
+    position:fixed;
+    top:5%;
+    left:5%;
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    border:3px solid red;
+    display:none;
+    }
+    #adsblockerbox strong{
+    position:absolute;
+    top:30%;
+    left:5%;
+    color:red;
+    }
 </style>
     </head>
     <body>
@@ -576,6 +592,7 @@ text-align:center;
     <p id="bttsnav"><strong>Btts</strong></p>
     <p id="dcnav"><strong>Double Chance</strong></p>
     </nav>
+    <div id="adsblockerbox"><strong>PLS turn off ads blocker and reload</strong></div>
     <script>
       var navicon = document.getElementById("navicon");
     var lineone = document.getElementById("line1");
@@ -755,6 +772,19 @@ window.location.href = "Straight Winning.html";
     dcnav.style.backgroundColor ="transparent";
     }, 1000)   
     })
+    const adsblockerbox = document.getElementById("adsblockerbox")
+    window.addEventListener("load", () => {
+      fetch(
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+        { method: "HEAD", mode: "no-cors", cache: "no-store" }
+      )
+        .then((res) => {
+        
+        })
+        .catch((err) => {
+    adsblockerbox.style.display = "initial";
+        });
+    });
     </script>
     </body>
 </html>
