@@ -432,6 +432,22 @@ position:relative;
 top:30%;
 text-align:center;
 }
+#adsblockerbox {
+    position:fixed;
+    top:5%;
+    left:5%;
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    border:3px solid red;
+    display:none;
+    }
+    #adsblockerbox strong{
+    position:absolute;
+    top:30%;
+    left:10%;
+    color:red;
+    }
 </style>
     </head>
     <body>
@@ -503,7 +519,8 @@ text-align:center;
     <p id="otnav"><strong>Over 2.5</strong></p>
     <p id="bttsnav"><strong>Btts</strong></p>
     <p id="dcnav"><strong>Double Chance</strong></p>
-    </nav>
+    </nav>
+<div id="adsblockerbox"><strong>PLS turn off ads blocker and reload</strong></div>
     <script>
       var navicon = document.getElementById("navicon");
     var lineone = document.getElementById("line1");
@@ -671,7 +688,20 @@ predictdate.innerText = formattedDate;
     setTimeout(function(){
     dcnav.style.backgroundColor ="transparent";
     }, 1000)   
-    })
+    })
+const adsblockerbox = document.getElementById("adsblockerbox")
+    window.addEventListener("load", () => {
+      fetch(
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+        { method: "HEAD", mode: "no-cors", cache: "no-store" }
+      )
+        .then((res) => {
+        
+        })
+        .catch((err) => {
+    adsblockerbox.style.display = "initial";
+        });
+    });
     </script>
     </body>
 </html>
